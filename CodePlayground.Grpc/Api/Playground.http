@@ -1,0 +1,13 @@
+﻿### gRPC Request to Collaborate Method
+GRPC localhost:5000/playground.CodePlaygroundService/Collaborate
+Content-Type: application/grpc
+TE: trailers
+
+# Request Body (streaming message)
+{
+  "client_id": "client1",
+  "code": "console.log('Hello, world!');",
+  "operation": "insert",
+  "position": 25,
+  "timestamp": 1682323200000
+}

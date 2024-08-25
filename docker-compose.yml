@@ -1,0 +1,6 @@
+﻿services:
+  codeplayground.grpc:
+    image: codeplayground.grpc
+    build:
+      context: .
+      dockerfile: CodePlayground.Grpc/Dockerfile

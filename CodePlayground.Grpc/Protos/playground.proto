@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+option csharp_namespace = "CodePlayground.Grpc";
+
+package playground;
+
+service CodePlaygroundService {
+  rpc Collaborate (stream CodeUpdate) returns (stream CodeUpdate);
+}
+
+message CodeUpdate {
+  string client_id = 1; // Unique identifier for the client
+  string code = 2;      // The current state of the code
+  string operation = 3; // Operation type (e.g., "insert", "delete")
+  int32 position = 4;   // Position of the edit in the code
+  int64 timestamp = 5;  // Timestamp of the update
+}
